@@ -1,0 +1,39 @@
+---
+name: Full Adder
+id:   FULLADDER
+
+inputs:
+  - A
+  - B
+  - Cin
+outputs:
+  - S
+  - Cout
+
+components:
+  AND1: AND
+  AND2: AND
+  XOR1: XOR
+  XOR2: XOR
+  OR1: OR
+
+A:
+  AND1: -1
+  XOR1: 0
+B:
+  AND1: -1
+  XOR1: 0
+Cin:
+  XOR2: 1
+  AND2: -1
+XOR1:
+  XOR2: 0
+  AND2: -1
+XOR2:
+  OUT: S
+AND1:
+  OR1: -1
+AND2:
+  OR1: -1
+OR1:
+  OUT: Cout

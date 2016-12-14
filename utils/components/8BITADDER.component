@@ -1,0 +1,45 @@
+A1: {AND1: -1, XOR1: 1}
+A2: {FA2: A}
+A3: {FA3: A}
+A4: {FA4: A}
+A5: {FA5: A}
+A6: {FA6: A}
+A7: {FA7: A}
+A8: {FA8: A}
+AND1: {FA2: Cin}
+B1: {AND1: -1, XOR1: 2}
+B2: {FA2: B}
+B3: {FA3: B}
+B4: {FA4: B}
+B5: {FA5: B}
+B6: {FA6: B}
+B7: {FA7: B}
+B8: {FA8: B}
+FA2:
+  Cout: {FA3: Cin}
+  S: {OUT: S2}
+FA3:
+  Cout: {FA4: Cin}
+  S: {OUT: S3}
+FA4:
+  Cout: {FA5: Cin}
+  S: {OUT: S4}
+FA5:
+  Cout: {FA6: Cin}
+  S: {OUT: S5}
+FA6:
+  Cout: {FA7: Cin}
+  S: {OUT: S6}
+FA7:
+  Cout: {FA8: Cin}
+  S: {OUT: S7}
+FA8:
+  Cout: {OUT: S9}
+  S: {OUT: S8}
+XOR1: {OUT: S1}
+components: {AND1: AND, FA2: FULLADDER, FA3: FULLADDER, FA4: FULLADDER, FA5: FULLADDER,
+  FA6: FULLADDER, FA7: FULLADDER, FA8: FULLADDER, XOR1: XOR}
+id: 8BITADDER
+inputs: [A1, A2, A3, A4, A5, A6, A7, A8, B1, B2, B3, B4, B5, B6, B7, B8]
+name: 8 bit adder
+outputs: [S1, S2, S3, S4, S5, S6, S7, S8, S9]
